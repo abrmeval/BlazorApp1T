@@ -1,0 +1,16 @@
+﻿@page "/test"
+@using Microsoft.Extensions.Configuration
+@using System.Linq;
+@inject IConfiguration Configuration
+
+<h3>Test</h3>
+<h3>@Name</h3>
+<h3>@Address</h3>
+<h3>@Configuration["message"]</h3>
+
+@code {
+    private string Name = "Jose";
+    private string Address = "Benito Juarez";
+    [Parameter]
+    public string Phone { get; set; } = "77123456789";
+}
